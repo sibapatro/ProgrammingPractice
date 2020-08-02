@@ -1,0 +1,40 @@
+Question
+------------
+
+There are  5 varieties of toys, namely A, B,C,D,E.
+Any toy shop could have any given number of these toys or none of these toys.
+Price for
+A - Rs.5,
+B - Rs.1,
+C - Rs.3,
+D - Rs.2,
+E - Rs.8
+ 
+When given the number of toys for each variety in a toy shop, and given an amount R ,
+please write a program that gives the max number of toys one could buy.
+ 
+For ex , Shop S has  1 A , 10 B, 5 C, 3 D, 0 E and R is Rs25.
+Output should be  : 16 . One could have bought 10 B s for 1 Rs each and 3 of Ds for Rs2
+each and 3 of C for Rs.3 each
+ 
+Please make necessary assumptions and document it in your solution.
+
+Assumptions
+------------
+Maximum number of toys is the targeted for solution 
+Matching of total amount will be less than or equal to R, but will have maximum Count of toys to buy.
+Toys price is fixed but available toys in shop is based on user input.
+Unknown Constraints are not handled.
+
+Solution
+---------
+2 maps will be used for a key(toy item) as pivot.
+Price array is fixed in the question , hence is converted to LinkedHashMap based on sort by values.
+Hashmap is used for Shop available input array, for fast retrieval and no sort required.
+
+Run the program and enter values for shop availability and amount as below example.
+
+Enter Toys availability in shop for A B C D E :: 1 10 5 3 0
+Enter the payable amount :: 25
+16
+
